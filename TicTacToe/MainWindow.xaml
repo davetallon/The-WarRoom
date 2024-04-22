@@ -1,0 +1,143 @@
+﻿<Window x:Class="TicTacToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:local="clr-namespace:TicTacToe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900" Loaded="Window_Loaded">
+
+    <Grid x:Name="ButtonGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <!--#region PLAY BUTTIONS -->
+        <!--Classic Play-->
+        <Button x:Name="btn_classicPlay" Visibility="Visible" Grid.Column="0" Grid.Row="0" Content="PLAY" Grid.RowSpan="2" Click="PlayBtn" FontSize="25" FontWeight="Bold" Margin="10"/>
+        <!--Flashy Play-->
+        <Border x:Name="btn_flashyPlay" Visibility="Collapsed" Background="MediumSpringGreen" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="10">
+            <Viewbox >
+                <StackPanel PreviewMouseLeftButtonUp="PlayBtn">
+                    <TextBlock FontFamily="{StaticResource FirstFonts}" Text="&#xe91c;" Margin="1"/>
+                </StackPanel>
+            </Viewbox>
+        </Border>
+        <!--#endregion-->
+
+        <!--#region GAME MODE -->
+        <Viewbox MaxHeight="900" Grid.Column="0" Grid.Row="2" Stretch="Uniform" Margin="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel PreviewMouseLeftButtonUp="SwapGameMode">
+                <TextBlock Visibility="Collapsed" x:Name="ToggleClassicGameMode" Text="&#xe9b6;" FontFamily="{StaticResource FirstFonts}" Foreground="Black"/>
+                <TextBlock Visibility="Visible" x:Name="ToggleFlashyGameMode" Text="&#xe9a9;" FontFamily="{StaticResource FirstFonts}" Foreground="Black"/>
+            </StackPanel>
+        </Viewbox>
+        <!--#endregion-->
+
+        <!--#region SQUARES -->
+        <!--Square 0-->
+        <Viewbox Grid.Column="1" Grid.Row="0" Stretch="Uniform">
+            <Button x:Name="btn0" Grid.Column="1" Grid.Row="0" Content="{Binding Sqr0.Label, Mode=OneWay}" FontWeight="Bold" Click="ActivateSquare" Background="Transparent" Width="30" BorderBrush="Transparent"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="0" Stretch="Uniform">
+            <TextBlock x:Name="tb0" Grid.Column="1" Grid.Row="0" Foreground="#FFA01280" Text="{Binding Sqr0.IconFontText, Mode=OneWay}" FontFamily="{StaticResource FirstFonts}" PreviewMouseLeftButtonUp="ActivateSquare" Padding="10,0,0,0" Margin="2" Width="30" Visibility="Collapsed"/>
+        </Viewbox>
+        <!--Square 1-->
+        <Viewbox Grid.Column="2" Grid.Row="0" Stretch="Uniform">
+            <Button x:Name="btn1" Grid.Column="1" Grid.Row="0" Content="{Binding Sqr1.Label, Mode=OneWay}" FontWeight="Bold" Click="ActivateSquare" Background="Transparent" Width="30" BorderBrush="Transparent"/>
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.Row="0" Stretch="Uniform">
+            <TextBlock x:Name="tb1" Grid.Column="1" Grid.Row="0" Foreground="#FFA01280" Text="{Binding Sqr1.IconFontText, Mode=OneWay}" FontFamily="{StaticResource FirstFonts}" PreviewMouseLeftButtonUp="ActivateSquare" Padding="10,0,0,0" Margin="2" Width="30" Visibility="Collapsed"/>
+        </Viewbox>
+        <!--Square 2-->
+        <Viewbox Grid.Column="3" Grid.Row="0" Stretch="Uniform">
+            <Button x:Name="btn2" Grid.Column="3" Grid.Row="0" Content="{Binding Sqr2.Label, Mode=OneWay}" FontWeight="Bold" Click="ActivateSquare" Background="Transparent" Width="30" BorderBrush="Transparent"/>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.Row="0" Stretch="Uniform">
+            <TextBlock x:Name="tb2" Grid.Column="3" Grid.Row="0" Foreground="#FFA01280" Text="{Binding Sqr2.IconFontText, Mode=OneWay}" FontFamily="{StaticResource FirstFonts}" PreviewMouseLeftButtonUp="ActivateSquare" Padding="10,0,0,0" Margin="2" Width="30" Visibility="Collapsed"/>
+        </Viewbox>
+        <!--Square 3-->
+        <Viewbox Grid.Column="1" Grid.Row="1" Stretch="Uniform">
+            <Button x:Name="btn3" Grid.Column="1" Grid.Row="1" Content="{Binding Sqr3.Label, Mode=OneWay}" FontWeight="Bold" Click="ActivateSquare" Background="Transparent" Width="30" BorderBrush="Transparent"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="1" Stretch="Uniform">
+            <TextBlock x:Name="tb3" Grid.Column="1" Grid.Row="1" Foreground="#FFA01280" Text="{Binding Sqr3.IconFontText, Mode=OneWay}" FontFamily="{StaticResource FirstFonts}" PreviewMouseLeftButtonUp="ActivateSquare" Padding="10,0,0,0" Margin="2" Width="30" Visibility="Collapsed"/>
+        </Viewbox>
+        <!--Square 4-->
+        <Viewbox Grid.Column="2" Grid.Row="1" Stretch="Uniform">
+            <Button x:Name="btn4" Grid.Column="2" Grid.Row="1" Content="{Binding Sqr4.Label, Mode=OneWay}" FontWeight="Bold" Click="ActivateSquare" Background="Transparent" Width="30" BorderBrush="Transparent"/>
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.Row="1" Stretch="Uniform">
+            <TextBlock x:Name="tb4" Grid.Column="2" Grid.Row="1" Foreground="#FFA01280" Text="{Binding Sqr4.IconFontText, Mode=OneWay}" FontFamily="{StaticResource FirstFonts}" PreviewMouseLeftButtonUp="ActivateSquare" Padding="10,0,0,0" Margin="2" Width="30" Visibility="Collapsed"/>
+        </Viewbox>
+        <!--Square 5-->
+        <Viewbox Grid.Column="3" Grid.Row="1" Stretch="Uniform">
+            <Button x:Name="btn5" Grid.Column="3" Grid.Row="1" Content="{Binding Sqr5.Label, Mode=OneWay}" FontWeight="Bold" Click="ActivateSquare" Background="Transparent" Width="30" BorderBrush="Transparent"/>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.Row="1" Stretch="Uniform">
+            <TextBlock x:Name="tb5" Grid.Column="3" Grid.Row="1" Foreground="#FFA01280" Text="{Binding Sqr5.IconFontText, Mode=OneWay}" FontFamily="{StaticResource FirstFonts}" PreviewMouseLeftButtonUp="ActivateSquare" Padding="10,0,0,0" Margin="2" Width="30" Visibility="Collapsed"/>
+        </Viewbox>
+        <!--Square 6-->
+        <Viewbox Grid.Column="1" Grid.Row="2" Stretch="Uniform">
+            <Button x:Name="btn6" Grid.Column="1" Grid.Row="2" Content="{Binding Sqr6.Label, Mode=OneWay}" FontWeight="Bold" Click="ActivateSquare" Background="Transparent" Width="30" BorderBrush="Transparent"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="2" Stretch="Uniform">
+            <TextBlock x:Name="tb6" Grid.Column="1" Grid.Row="2" Foreground="#FFA01280" Text="{Binding Sqr6.IconFontText, Mode=OneWay}" FontFamily="{StaticResource FirstFonts}" PreviewMouseLeftButtonUp="ActivateSquare" Padding="10,0,0,0" Margin="2" Width="30" Visibility="Collapsed"/>
+        </Viewbox>
+        <!--Square 7-->
+        <Viewbox Grid.Column="2" Grid.Row="2" Stretch="Uniform">
+            <Button x:Name="btn7" Grid.Column="2" Grid.Row="2" Content="{Binding Sqr7.Label, Mode=OneWay}" FontWeight="Bold" Click="ActivateSquare" Background="Transparent" Width="30" BorderBrush="Transparent"/>
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.Row="2" Stretch="Uniform">
+            <TextBlock x:Name="tb7" Grid.Column="2" Grid.Row="2" Foreground="#FFA01280" Text="{Binding Sqr7.IconFontText, Mode=OneWay}" FontFamily="{StaticResource FirstFonts}" PreviewMouseLeftButtonUp="ActivateSquare" Padding="10,0,0,0" Margin="2" Width="30" Visibility="Collapsed"/>
+        </Viewbox>
+        <!--Square 8-->
+        <Viewbox Grid.Column="3" Grid.Row="2" Stretch="Uniform">
+            <Button x:Name="btn8" Grid.Column="3" Grid.Row="2" Content="{Binding Sqr8.Label, Mode=OneWay}" FontWeight="Bold" Click="ActivateSquare" Background="Transparent" Width="30" BorderBrush="Transparent"/>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.Row="2" Stretch="Uniform">
+            <TextBlock x:Name="tb8" Grid.Column="1" Grid.Row="0" Foreground="#FFA01280" Text="{Binding Sqr8.IconFontText, Mode=OneWay}" FontFamily="{StaticResource FirstFonts}" PreviewMouseLeftButtonUp="ActivateSquare" Padding="10,0,0,0" Margin="2" Width="30" Visibility="Collapsed"/>
+        </Viewbox>
+        <!--#endregion-->
+
+        <!--#region POINTS -->
+        <!--PONTS TITLE/ICON-->
+        <TextBlock x:Name="points" Visibility="Visible" Grid.Column="4" Grid.Row="1" Text="POINTS" FontSize="25" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center"/>
+        <Viewbox x:Name="trophy" Visibility="Collapsed" Grid.Column="4" Grid.Row="1">
+            <StackPanel>
+                <TextBlock FontFamily="{StaticResource FirstFonts}" Text="&#xe918;" Margin="1"/>
+            </StackPanel>
+        </Viewbox>
+        <!--X POINTS-->
+        <TextBlock Grid.Column="4" Grid.Row="0" Text="X" FontSize="50" Margin="10" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="4" Grid.Row="0" Text="{Binding scorecard.xPoints, Mode=OneWay}" FontSize="40" Margin="10" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Bottom"/>
+        <!--O POINTS-->
+        <TextBlock Grid.Column="4" Grid.Row="2" Text="O" FontSize="50" Margin="10" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="4" Grid.Row="2" Text="{Binding scorecard.oPoints, Mode=OneWay}" FontSize="40" Margin="10" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Bottom"/>
+        <!--#endregion-->
+    </Grid>
+</Window>
+
+    
+<!--//NOTES ON FONTS!!
+    
+    [useful answer from 'mahendra kamble' on  Jul 11, 2016 at 11:15
+    https://stackoverflow.com/questions/38305239/how-use-icon-font-awesome-in-wpf]
+    
+    STEPS:
+    -Collected fonts from FontAwesome  e.g: https://fontawesome.com/icons/burst?f=classic&s=solid
+    -Built a font at IcoMoon   e.g: https://icomoon.io/app/#/select/font
+    -Imported the .ttf into my project ASSETS folder
+    -In properties of file - changed the build action to 'Resource' and copy-to-output to 'Copy Always'
+    -Created an application resource in App.xaml file
+    -Created a TextBlock inside a Viewbox (for sizing) using the unicode reference sufixed with a '&#x' (all found in the accompanying demo.html file)
+    -->

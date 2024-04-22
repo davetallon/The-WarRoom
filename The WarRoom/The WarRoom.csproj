@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>The_WarRoom</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ASSETS\FONTS\PermanentMarker-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ASSETS\GameBoxes\MiddleRow\" />
+    <Folder Include="ASSETS\GameBoxes\BottomRow\" />
+    <Folder Include="ASSETS\Header\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ASSETS\FONTS\PermanentMarker-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

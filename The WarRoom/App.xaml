@@ -1,0 +1,32 @@
+﻿<Application x:Class="The_WarRoom.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:The_WarRoom"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!--App Background-->
+        <ImageBrush x:Key="background" ImageSource="C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\BACKGROUND.png" />
+        <!--Header row-->
+        <ImageSource x:Key="credits_Btn">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\CREDITS_BTN.png</ImageSource>
+        <ImageSource x:Key="start_Btn">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\START_BTN.png</ImageSource>
+        <ImageSource x:Key="close_Btn">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\CLOSE_BTN.png</ImageSource>
+
+        <!--Game Boxes-->
+        <!--Top Row-->
+        <ImageSource x:Key="OL_topLeft">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\TopRow\Outline_TopLeft.png</ImageSource>
+        <ImageSource x:Key="OL_topMiddle">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\TopRow\Outline_TopCenter.png</ImageSource>
+        <ImageSource x:Key="OL_topRight">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\TopRow\Outline_TopRight.png</ImageSource>
+        <!--Middle Row-->
+        <ImageSource x:Key="OL_midLeft">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\MiddleRow\MAP_LEFT.png</ImageSource>
+        <ImageSource x:Key="OL_midMiddle">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\MiddleRow\MAP_CENTER.png</ImageSource>
+        <ImageSource x:Key="OL_midRight">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\MiddleRow\MAP_RIGHT.png</ImageSource>
+        <!--Bottom Row-->
+        <ImageSource x:Key="OL_bottomLeft">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\BottomRow\MAP_LEFT.png</ImageSource>
+        <ImageSource x:Key="OL_bottomMiddle">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\BottomRow\MAP_CENTER.png</ImageSource>
+        <ImageSource x:Key="OL_bottomRight">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\BottomRow\MAP_RIGHT.png</ImageSource>
+        
+        <!--FONTS-->
+        <FontFamily x:Key="font_Marker">./ASSETS/FONTS/PermanentMarker-Regular.ttf#Permanent Marker</FontFamily>
+        <!--The # at end of the FontFamily decleration is the name of the font, found inside the .tff file when double-clicking to open the windows outline display-->
+    </Application.Resources>
+</Application>
