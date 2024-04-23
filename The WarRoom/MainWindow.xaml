@@ -16,7 +16,7 @@
             <RowDefinition Height="335*"/>
             <RowDefinition Height="320*"/>
         </Grid.RowDefinitions>
-
+      
         <!--BACKGROUND-->
         <Grid.Background>
             <StaticResource ResourceKey="background" />
@@ -32,7 +32,7 @@
 
             <!--credits btn left-->
             <Viewbox Grid.Column="0" Stretch="Fill" Margin="30 25 0 40">
-                <Image Source="{StaticResource credits_Btn}"/>
+                <Image Name="creditsImage" Source="{StaticResource credits_Btn}" MouseLeftButtonUp="Image_MouseLeftButtonUp" MouseEnter="Image_MouseEnter"/> 
             </Viewbox>
 
             <!--Scoreboard area middle-->
@@ -227,11 +227,6 @@
             <!--Player-->
             <Viewbox Grid.Row="1" Grid.Column="2" Margin="-100 -20 40 80">
                 <TextBlock Text="X" Foreground="White" FontSize="10" FontFamily="{StaticResource font_Marker}"/>
-            </Viewbox>
-
-            <!--Player-->
-            <Viewbox Grid.Row="1" Grid.Column="0" Margin="160 0 0 50">
-                <TextBlock Text="X" Foreground="White" FontSize="10" FontFamily="{StaticResource font_Marker}">{sdf}</TextBlock>
             </Viewbox>
         </Grid>
 

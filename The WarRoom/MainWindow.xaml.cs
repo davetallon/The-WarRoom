@@ -20,5 +20,19 @@ namespace The_WarRoom
         {
             InitializeComponent();
         }
+
+        CreditsWindow creditsWindow = new CreditsWindow();
+        
+        private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            creditsWindow.ShowDialog();
+            //creditsWindow.Close();
+        }
+
+        private void Image_MouseEnter(object sender, MouseEventArgs e)
+        {
+            
+
+        }
     }
 }

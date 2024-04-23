@@ -10,6 +10,10 @@
         <ImageSource x:Key="credits_Btn">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\CREDITS_BTN.png</ImageSource>
         <ImageSource x:Key="start_Btn">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\START_BTN.png</ImageSource>
         <ImageSource x:Key="close_Btn">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\CLOSE_BTN.png</ImageSource>
+        <!--Header row Hover-->
+        <ImageSource x:Key="credits_Btn_Hover">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\CLOSE_BTN_HOVER.png</ImageSource>
+        <ImageSource x:Key="start_Btn_Hover">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\START_BTN_HOVER.png</ImageSource>
+        <ImageSource x:Key="close_Btn_Hover">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\CLOSE_BTN_HOVER.png</ImageSource>
 
         <!--Game Boxes-->
         <!--Top Row-->
@@ -25,6 +29,9 @@
         <ImageSource x:Key="OL_bottomMiddle">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\BottomRow\MAP_CENTER.png</ImageSource>
         <ImageSource x:Key="OL_bottomRight">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\BottomRow\MAP_RIGHT.png</ImageSource>
         
+        <!--CREDITS-->
+        <ImageSource x:Key="credits">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\CREDITS_CARD.png</ImageSource>
+
         <!--FONTS-->
         <FontFamily x:Key="font_Marker">./ASSETS/FONTS/PermanentMarker-Regular.ttf#Permanent Marker</FontFamily>
         <!--The # at end of the FontFamily decleration is the name of the font, found inside the .tff file when double-clicking to open the windows outline display-->

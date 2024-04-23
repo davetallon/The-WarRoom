@@ -1,0 +1,18 @@
+﻿<Window x:Class="The_WarRoom.CreditsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:The_WarRoom"
+        mc:Ignorable="d"
+        Title="CreditsWindow" Height="458" Width="608"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        MouseLeftButtonUp="Window_MouseLeftButtonUp">
+    <Grid>
+        <Border BorderThickness="0.5" CornerRadius="15" Background="White" Opacity="1">
+        <Viewbox Grid.Column="0" Stretch="Fill" Margin="10 10 10 10">
+            <Image Source="{StaticResource credits}"/>
+        </Viewbox>
+        </Border>
+    </Grid>
+</Window>
