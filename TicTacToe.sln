@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROTOTYPE", "TicTacToe\PROTOTYPE.csproj", "{3063E152-6308-43B9-A326-50C9ECAEE620}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The War Room_PROTOTYPE", "TicTacToe\The War Room_PROTOTYPE.csproj", "{3063E152-6308-43B9-A326-50C9ECAEE620}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THE WAR ROOM", "The WarRoom\THE WAR ROOM.csproj", "{E33551F5-78DB-4FEB-A72F-58F52EC4CDBF}"
 EndProject
