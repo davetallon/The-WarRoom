@@ -1,0 +1,307 @@
+﻿<Window x:Class="The_WarRoom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:The_WarRoom"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1200" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown">
+
+    <!--MASTER GRID-->
+    <Grid Name="masterGrid">
+        
+        <!--MASTER GRID LAYOUT--> 
+    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="224*"/>
+            <RowDefinition Height="305*"/>
+            <RowDefinition Height="335*"/>
+            <RowDefinition Height="320*"/>
+        </Grid.RowDefinitions>
+      
+        <!--BACKGROUND-->
+        <Grid.Background>
+            <StaticResource ResourceKey="background" />
+        </Grid.Background>
+
+        <!--HEADER-->
+        <Grid Name="headerGrid" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="34*"/>
+                <ColumnDefinition Width="7*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--credits btn left-->
+            <Viewbox Grid.Column="0" Stretch="Fill" Margin="30 25 0 40">
+                <Image Name="UI_CreditsBtn" Source="{StaticResource credits_Btn}" MouseLeftButtonUp="CreditsBTN_MouseLeftButtonUp" MouseEnter="CreditsBTN_MouseEnter" MouseLeave="CreditsBTN_MouseLeave"/> 
+            </Viewbox>
+            
+            <!--Scoreboard area middle-->
+            <Border Grid.Column="1" BorderBrush="White" BorderThickness="3" Margin="50 50 50 50">
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="157*"/>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="517*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Grid.Column="0" Stretch="Fill" Margin="25,10,45,10">
+                        <Image Name="UI_StartBtn" Source="{StaticResource start_Btn}" MouseEnter="StartBTN_MouseEnter" MouseLeave="StartBTN_MouseLeave" MouseDown="StartBTN_MouseDown"/>
+                    </Viewbox>
+                    <StackPanel Grid.Column="1" Orientation="Vertical">
+                        <TextBlock Text="X" Foreground="White" FontSize="40" FontFamily="{StaticResource font_Marker}"/>
+                        <TextBlock Text="O" Foreground="White" FontSize="40" FontFamily="{StaticResource font_Marker}"/>
+                    </StackPanel>
+
+                    <!--Score count-->
+                    <StackPanel Grid.Column="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="xScore1"/>
+                            <TextBlock Grid.Column="1" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="xScore2"/>
+                            <TextBlock Grid.Column="2" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="xScore3"/>
+                            <TextBlock Grid.Column="3" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="xScore4"/>
+                            <TextBlock Grid.Column="4" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="xScore5"/>
+                            <TextBlock Grid.Column="5" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="xScore6"/>
+                            <TextBlock Grid.Column="6" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="xScore7"/>
+                            <TextBlock Grid.Column="7" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="xScore8"/>
+                            <TextBlock Grid.Column="8" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="xScore9"/>
+                            <TextBlock Grid.Column="9" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="xScore10"/>
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="oScore1"/>
+                            <TextBlock Grid.Column="1" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="oScore2"/>
+                            <TextBlock Grid.Column="2" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="oScore3"/>
+                            <TextBlock Grid.Column="3" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="oScore4"/>
+                            <TextBlock Grid.Column="4" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="oScore5"/>
+                            <TextBlock Grid.Column="5" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="oScore6"/>
+                            <TextBlock Grid.Column="6" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="oScore7"/>
+                            <TextBlock Grid.Column="7" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="oScore8"/>
+                            <TextBlock Grid.Column="8" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="oScore9"/>
+                            <TextBlock Grid.Column="9" Text="i" Foreground="DarkRed" FontSize="40" FontFamily="{StaticResource font_Marker}" Visibility="Hidden" x:Name="oScore10"/>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            
+            <!--close btn right-->
+            <Viewbox Grid.Column="2" Stretch="Fill" Margin="30 30 30 45">
+                <Image Name="UI_CloseBtn" Source="{StaticResource close_Btn}" MouseEnter="CloseBTN_MouseEnter" MouseLeave="CloseBTN_MouseLeave" MouseLeftButtonUp="CloseBTN_MouseLeftButtonUp"/>
+            </Viewbox>
+        </Grid>
+
+        <!--TOP GAME ROW-->
+        <Grid Grid.Row="0" Name="topRowGrid" Margin="0,224,0,0" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.25*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--TOP LEFT-->
+            <Grid Grid.Column="0" PreviewMouseLeftButtonUp="ActivateSquare" Margin="160 43 4 68">
+                <!--Box-->
+                <Viewbox Stretch="Fill" x:Name="vb_Outline0" IsHitTestVisible="False">
+                    <Image Source="{StaticResource OL_topLeft}"/>
+                </Viewbox>
+                <!--Player-->
+                <Viewbox Height="240"  Margin="20 -30 0 0">
+                    <TextBlock x:Name="Sqr0" Text="{Binding Sqr0.Label, Mode=OneWay}" Style="{StaticResource baseTextStyle}" Foreground="{Binding Sqr0.FontColour}"/>
+                </Viewbox>
+                <!--Hover trigger-->
+                <Polygon x:Name="btn0" 
+                         Points="0,0 30,201 272,201 263,0"  
+                         StrokeThickness="2"
+                         Fill="Transparent">
+                </Polygon>
+            </Grid>
+
+            <!--TOP CENTER-->
+            <Grid Grid.Column="1" PreviewMouseLeftButtonUp="ActivateSquare" Margin="9 25 0 67">
+                <!--Box-->
+                <Viewbox Stretch="Fill" x:Name="vb_Outline1" IsHitTestVisible="False">
+                    <Image Source="{StaticResource OL_topMiddle}"/>
+                </Viewbox>
+                <!--Player-->
+                <Viewbox Height="270"  Margin="0 -30 0 0">
+                    <TextBlock x:Name="Sqr1" Text="{Binding Sqr1.Label, Mode=OneWay}" Style="{StaticResource baseTextStyle}" Foreground="{Binding Sqr1.FontColour}"/>
+                </Viewbox>
+                <!--Hover trigger-->
+                <Polygon x:Name="btn1" 
+                         Points="-1,0 5,221 304,221 320,0" 
+                         StrokeThickness="2"
+                         Fill="Transparent">
+                </Polygon>
+            </Grid>
+
+            <!--TOP RIGHT-->
+            <Grid Grid.Column="2" PreviewMouseLeftButtonUp="ActivateSquare" Margin="0 44 137 69">
+                <!--Box-->
+                <Viewbox Stretch="Fill" x:Name="vb_Outline2" IsHitTestVisible="False">
+                    <Image Source="{StaticResource OL_topRight}"/>
+                </Viewbox>
+                <!--Player-->
+                <Viewbox Height="230"  Margin="0 -20 0 0">
+                    <TextBlock x:Name="Sqr2" Text="{Binding Sqr2.Label, Mode=OneWay}" Style="{StaticResource baseTextStyle}" Foreground="{Binding Sqr2.FontColour}"/>
+                </Viewbox>
+                <!--Hover trigger-->
+                <Polygon x:Name="btn2" 
+                         Points="17,0 0,199 240,199 276,0" 
+                         StrokeThickness="2"
+                         Fill="Transparent">
+                </Polygon>
+            </Grid>
+        </Grid>
+
+        <!--MIDDLE/BOTTOM GAME ROWS-->
+        <Grid Name="midRowGrid" Grid.Row="2" Grid.RowSpan="2" Margin="0,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="84*"/>
+                <ColumnDefinition Width="71*"/>
+                <ColumnDefinition Width="85*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1.3*"/>
+                <RowDefinition Height="0.4*"/>
+            </Grid.RowDefinitions>
+
+            <!--MIDDLE LEFT-->
+            <Grid Grid.Column="0" PreviewMouseLeftButtonUp="ActivateSquare" Margin="125,25,15,50">
+                <!--Box-->
+                <Viewbox Stretch="Fill" x:Name="vb_Outline3" IsHitTestVisible="False">
+                    <Image Source="{StaticResource midLeft}"/>
+                </Viewbox>
+                <!--Player-->
+                <Viewbox Height="230" Margin="0 -40 0 0">
+                    <TextBlock x:Name="Sqr3" Text="{Binding Sqr3.Label, Mode=OneWay}" Style="{StaticResource baseTextStyle}" Foreground="{Binding Sqr3.FontColour}"/>
+                </Viewbox>
+                <!--Hover trigger-->
+                <Polygon x:Name="btn3" 
+                         Points="0,0 27,170 275,170 245,0"  
+                         StrokeThickness="2"
+                         Fill="Transparent">
+                </Polygon>
+            </Grid>
+
+            <!--MIDDLE CENTER-->
+            <Grid Grid.Column="1" PreviewMouseLeftButtonUp="ActivateSquare" Margin="0,0,0,0">
+                <!--Box-->
+                <Viewbox Stretch="Fill" x:Name="vb_Outline4" IsHitTestVisible="False">
+                    <Image Source="{StaticResource midMiddle}"/>
+                </Viewbox>
+                <!--Player-->
+                <Viewbox Height="320" Margin="0 -50 0 0">
+                    <TextBlock x:Name="Sqr4" Text="{Binding Sqr4.Label, Mode=OneWay}" Style="{StaticResource baseTextStyle}" Foreground="{Binding Sqr4.FontColour}"/>
+                </Viewbox>
+                <!--Hover trigger-->
+                <Polygon x:Name="btn4" 
+                         Points="3,0 6,246 345,246 348,0" 
+                         StrokeThickness="2"
+                         Fill="Transparent">
+                </Polygon>
+            </Grid>
+
+            <!--MIDDLE RIGHT-->
+            <Grid Grid.Column="2" PreviewMouseLeftButtonUp="ActivateSquare" Margin="15,25,140,50">
+                <!--Box-->
+                <Viewbox Stretch="Fill" x:Name="vb_Outline5" IsHitTestVisible="False">
+                    <Image Source="{StaticResource midRight}"/>
+                </Viewbox>
+                <!--Player-->
+                <Viewbox Height="230" Margin="0 -40 0 0">
+                    <TextBlock x:Name="Sqr5" Text="{Binding Sqr5.Label, Mode=OneWay}" Style="{StaticResource baseTextStyle}" Foreground="{Binding Sqr5.FontColour}"/>
+                </Viewbox>
+                <!--Hover trigger-->
+                <Polygon x:Name="btn5" 
+                         Points="17,0 0,171 230,171 265,0" 
+                         StrokeThickness="2"
+                         Fill="Transparent">
+                </Polygon>
+            </Grid>
+
+            <!--BOTTOM LEFT-->
+            <Grid Grid.Row="1" Grid.Column="0" PreviewMouseLeftButtonUp="ActivateSquare" Margin="125,20,10,100">
+                <!--Box-->
+                <Viewbox Stretch="Fill" x:Name="vb_Outline6" IsHitTestVisible="False">
+                    <Image Source="{StaticResource bottomLeft}"/>
+                </Viewbox>
+                <!--Player-->
+                <Viewbox Height="240" Margin="0 -30 0 0">
+                    <TextBlock x:Name="Sqr6" Text="{Binding Sqr6.Label, Mode=OneWay}" Style="{StaticResource baseTextStyle}" Foreground="{Binding Sqr6.FontColour}"/>
+                </Viewbox>
+                <!--Hover trigger-->
+                <Polygon x:Name="btn6" 
+                         Points="18,0 0,200 244,200 280,0" 
+                         StrokeThickness="2"
+                         Fill="Transparent">
+                </Polygon>
+            </Grid>
+
+            <!--BOTTOM CENTER-->
+            <Grid Grid.Row="1" Grid.Column="1" PreviewMouseLeftButtonUp="ActivateSquare" Margin="10,40,0,50">
+                <!--Box-->
+                <Viewbox Stretch="Fill" x:Name="vb_Outline7" IsHitTestVisible="False">
+                    <Image Source="{StaticResource bottomMiddle}"/>
+                </Viewbox>
+                <!--Player-->
+                <Viewbox Height="250" Margin="0 -20 0 0">
+                    <TextBlock x:Name="Sqr7" Text="{Binding Sqr7.Label, Mode=OneWay}" Style="{StaticResource baseTextStyle}" Foreground="{Binding Sqr7.FontColour}"/>
+                </Viewbox>
+                <!--Hover trigger-->
+                <Polygon x:Name="btn7" 
+                         Points="21,0 0,230 340,230 310,0" 
+                         StrokeThickness="2"
+                         Fill="Transparent">
+                </Polygon>
+            </Grid>
+
+            <!--BOTTOM RIGHT-->
+            <Grid Grid.Row="1" Grid.Column="2" PreviewMouseLeftButtonUp="ActivateSquare" Margin="10,20,140,100">
+                <!--Box-->
+                <Viewbox Stretch="Fill" x:Name="vb_Outline8" IsHitTestVisible="False">
+                    <Image Source="{StaticResource bottomRight}"/>
+                </Viewbox>
+                <!--Player-->
+                <Viewbox Height="230" Margin="10 -30 0 0">
+                    <TextBlock x:Name="Sqr8" Text="{Binding Sqr8.Label, Mode=OneWay}" Style="{StaticResource baseTextStyle}" Foreground="{Binding Sqr8.FontColour}"/>
+                </Viewbox>
+                <!--Hover trigger-->
+                <Polygon x:Name="btn8" 
+                         Points="0,0 27,200 270,200 242,0"  
+                         StrokeThickness="2"
+                         Fill="Transparent">
+                </Polygon>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

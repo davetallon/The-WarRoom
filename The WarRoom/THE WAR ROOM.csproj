@@ -10,19 +10,89 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ASSETS\BACKGROUND.png" />
+    <None Remove="ASSETS\CREDITS_CARD.png" />
+    <None Remove="ASSETS\drStrangelove.png" />
     <None Remove="ASSETS\FONTS\PermanentMarker-Regular.ttf" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ASSETS\GameBoxes\MiddleRow\" />
-    <Folder Include="ASSETS\GameBoxes\BottomRow\" />
-    <Folder Include="ASSETS\Header\" />
+    <None Remove="ASSETS\GameBoxes\BottomRow\MAP_CENTER.png" />
+    <None Remove="ASSETS\GameBoxes\BottomRow\MAP_LEFT.png" />
+    <None Remove="ASSETS\GameBoxes\BottomRow\MAP_RIGHT.png" />
+    <None Remove="ASSETS\GameBoxes\MiddleRow\MAP_CENTER.png" />
+    <None Remove="ASSETS\GameBoxes\MiddleRow\MAP_LEFT.png" />
+    <None Remove="ASSETS\GameBoxes\MiddleRow\MAP_RIGHT.png" />
+    <None Remove="ASSETS\GameBoxes\TopRow\Outline_TopCenter.png" />
+    <None Remove="ASSETS\GameBoxes\TopRow\Outline_TopLeft.png" />
+    <None Remove="ASSETS\GameBoxes\TopRow\Outline_TopRight.png" />
+    <None Remove="ASSETS\Header\CLOSE_BTN.png" />
+    <None Remove="ASSETS\Header\CLOSE_BTN_HOVER.png" />
+    <None Remove="ASSETS\Header\CREDITS_BTN.png" />
+    <None Remove="ASSETS\Header\CREDITS_BTN_HOVER.png" />
+    <None Remove="ASSETS\Header\START_BTN.png" />
+    <None Remove="ASSETS\Header\START_BTN_HOVER.png" />
+    <None Remove="ASSETS\REPLAY.jpg" />
+    <None Remove="ASSETS\REPLAY.png" />
+    <None Remove="ASSETS\RestartVector.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="ASSETS\FONTS\PermanentMarker-Regular.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.4" />
+    <Resource Include="ASSETS\BACKGROUND.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\CREDITS_CARD.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\drStrangelove.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\GameBoxes\BottomRow\MAP_CENTER.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\GameBoxes\BottomRow\MAP_LEFT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\GameBoxes\BottomRow\MAP_RIGHT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\GameBoxes\MiddleRow\MAP_CENTER.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\GameBoxes\MiddleRow\MAP_LEFT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\GameBoxes\MiddleRow\MAP_RIGHT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\GameBoxes\TopRow\Outline_TopCenter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\GameBoxes\TopRow\Outline_TopLeft.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\GameBoxes\TopRow\Outline_TopRight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\Header\CLOSE_BTN.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\Header\CLOSE_BTN_HOVER.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\Header\CREDITS_BTN.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\Header\CREDITS_BTN_HOVER.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\Header\START_BTN.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ASSETS\Header\START_BTN_HOVER.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

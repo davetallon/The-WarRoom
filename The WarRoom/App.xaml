@@ -2,38 +2,56 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:The_WarRoom"
-             StartupUri="MainWindow.xaml">
+             StartupUri="VIEW\MainWindow.xaml">
     <Application.Resources>
-        <!--App Background-->
-        <ImageBrush x:Key="background" ImageSource="C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\BACKGROUND.png" />
-        <!--Header row-->
-        <ImageSource x:Key="credits_Btn">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\CREDITS_BTN.png</ImageSource>
-        <ImageSource x:Key="start_Btn">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\START_BTN.png</ImageSource>
-        <ImageSource x:Key="close_Btn">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\CLOSE_BTN.png</ImageSource>
-        <!--Header row Hover-->
-        <ImageSource x:Key="credits_Btn_Hover">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\CLOSE_BTN_HOVER.png</ImageSource>
-        <ImageSource x:Key="start_Btn_Hover">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\START_BTN_HOVER.png</ImageSource>
-        <ImageSource x:Key="close_Btn_Hover">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\Header\CLOSE_BTN_HOVER.png</ImageSource>
+        <ResourceDictionary>
+            <!--App Background-->
+            <ImageBrush x:Key="background" ImageSource="ASSETS\BACKGROUND.png"/>
+           
+            <!--Winner Window-->
+            <!--<ImageSource x:Key="drStrangelove">ASSETS\drStrangelove.png</ImageSource>-->
+            <ImageBrush x:Key="drStrangelove" ImageSource="ASSETS\drStrangelove.png"/>
+            
+            <!--Replay-->
+            <ImageSource x:Key="REPLAY">Assets\REPLAY.png</ImageSource>
 
-        <!--Game Boxes-->
-        <!--Top Row-->
-        <ImageSource x:Key="OL_topLeft">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\TopRow\Outline_TopLeft.png</ImageSource>
-        <ImageSource x:Key="OL_topMiddle">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\TopRow\Outline_TopCenter.png</ImageSource>
-        <ImageSource x:Key="OL_topRight">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\TopRow\Outline_TopRight.png</ImageSource>
-        <!--Middle Row-->
-        <ImageSource x:Key="OL_midLeft">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\MiddleRow\MAP_LEFT.png</ImageSource>
-        <ImageSource x:Key="OL_midMiddle">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\MiddleRow\MAP_CENTER.png</ImageSource>
-        <ImageSource x:Key="OL_midRight">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\MiddleRow\MAP_RIGHT.png</ImageSource>
-        <!--Bottom Row-->
-        <ImageSource x:Key="OL_bottomLeft">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\BottomRow\MAP_LEFT.png</ImageSource>
-        <ImageSource x:Key="OL_bottomMiddle">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\BottomRow\MAP_CENTER.png</ImageSource>
-        <ImageSource x:Key="OL_bottomRight">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\GameBoxes\BottomRow\MAP_RIGHT.png</ImageSource>
-        
-        <!--CREDITS-->
-        <ImageSource x:Key="credits">C:\Users\David\source\repos\TicTacToe\The WarRoom\ASSETS\CREDITS_CARD.png</ImageSource>
+            <!--HEADER ROW-->
+            <!--Credits button-->
+            <ImageSource x:Key="credits_Btn">Assets\Header\CREDITS_BTN.png</ImageSource>
+            <BitmapImage x:Key="credits_Btn_Hover" UriSource="Assets\Header\CREDITS_BTN_HOVER.png"/>
+            <!--Start button-->
+            <ImageSource x:Key="start_Btn">Assets\Header\START_BTN.png</ImageSource>
+            <BitmapImage x:Key="start_Btn_Hover" UriSource="Assets\Header\START_BTN_HOVER.png"/>
+            <!--Close button-->
+            <ImageSource x:Key="close_Btn">Assets\Header\CLOSE_BTN.png</ImageSource>
+            <BitmapImage x:Key="close_Btn_Hover" UriSource="Assets\Header\CLOSE_BTN_HOVER.png"/>
 
-        <!--FONTS-->
-        <FontFamily x:Key="font_Marker">./ASSETS/FONTS/PermanentMarker-Regular.ttf#Permanent Marker</FontFamily>
-        <!--The # at end of the FontFamily decleration is the name of the font, found inside the .tff file when double-clicking to open the windows outline display-->
+            <!--GAME BOXES-->
+            <!--Top Row-->
+            <ImageSource x:Key="OL_topLeft">Assets\GameBoxes\TopRow\Outline_TopLeft.png</ImageSource>
+            <ImageSource x:Key="OL_topMiddle">Assets\GameBoxes\TopRow\Outline_TopCenter.png</ImageSource>
+            <ImageSource x:Key="OL_topRight">Assets\GameBoxes\TopRow\Outline_TopRight.png</ImageSource>
+            <!--Middle Row-->
+            <ImageSource x:Key="midLeft">Assets\GameBoxes\MiddleRow\MAP_LEFT.png</ImageSource>
+            <ImageSource x:Key="midMiddle">Assets\GameBoxes\MiddleRow\MAP_CENTER.png</ImageSource>
+            <ImageSource x:Key="midRight">Assets\GameBoxes\MiddleRow\MAP_RIGHT.png</ImageSource>
+            <!--Bottom Row-->
+            <ImageSource x:Key="bottomLeft">Assets\GameBoxes\BottomRow\MAP_LEFT.png</ImageSource>
+            <ImageSource x:Key="bottomMiddle">Assets\GameBoxes\BottomRow\MAP_CENTER.png</ImageSource>
+            <ImageSource x:Key="bottomRight">Assets\GameBoxes\BottomRow\MAP_RIGHT.png</ImageSource>
+
+            <!--CREDITS-->
+            <ImageSource x:Key="credits">Assets\CREDITS_CARD.png</ImageSource>
+
+            <!--FONTS-->
+            <FontFamily x:Key="font_Marker">./ASSETS/FONTS/PermanentMarker-Regular.ttf#Permanent Marker</FontFamily>
+            <!--The # value at end of the FontFamily decleration is the name of the font, found inside the .tff file when double-clicking to open the windows outline display-->
+
+                <!--STYLES-->
+            <Style TargetType="TextBlock" x:Key="baseTextStyle">
+                <Setter Property="FontFamily" Value="{StaticResource font_Marker}"/>
+            </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

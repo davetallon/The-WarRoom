@@ -9,10 +9,12 @@
         WindowStyle="None" AllowsTransparency="True" Background="Transparent"
         MouseLeftButtonUp="Window_MouseLeftButtonUp">
     <Grid>
-        <Border BorderThickness="0.5" CornerRadius="15" Background="White" Opacity="1">
-        <Viewbox Grid.Column="0" Stretch="Fill" Margin="10 10 10 10">
-            <Image Source="{StaticResource credits}"/>
-        </Viewbox>
+        <Border Background="Black" CornerRadius="1" >
+            <Border BorderThickness="5" CornerRadius="15" Background="White" Opacity="1">
+                <Viewbox Grid.Column="0" Stretch="Fill" Margin="10 10 10 10">
+                    <Image Source="{StaticResource credits}"/>
+                </Viewbox>
+            </Border>
         </Border>
     </Grid>
 </Window>
