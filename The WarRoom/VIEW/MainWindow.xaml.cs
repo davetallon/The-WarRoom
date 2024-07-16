@@ -10,6 +10,7 @@ using The_WarRoom.VIEWMODELS;
 
 namespace The_WarRoom
 {
+
     public partial class MainWindow : Window
     {
         //INSTANTIATE THE VIEWMODEL
