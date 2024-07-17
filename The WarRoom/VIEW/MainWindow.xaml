@@ -8,7 +8,9 @@
         Title="MainWindow" Height="1200" Width="1200"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        MouseDown="Window_MouseDown">
+        MouseDown="Window_MouseDown" 
+        ResizeMode="NoResize"
+        AllowsTransparency="True">
 
     <!--MASTER GRID-->
     <Grid Name="masterGrid">

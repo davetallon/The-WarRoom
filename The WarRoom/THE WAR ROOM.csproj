@@ -7,10 +7,16 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/davetallon/The-WarRoom</RepositoryUrl>
+    <PackageIcon>AppIcon.jpeg</PackageIcon>
+    <ApplicationIcon>ASSETS\circle-radiation-solid 1.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ASSETS\AppIcon.jpeg" />
     <None Remove="ASSETS\BACKGROUND.png" />
+    <None Remove="ASSETS\circle-radiation-solid.ico" />
     <None Remove="ASSETS\CREDITS_CARD.png" />
     <None Remove="ASSETS\drStrangelove.png" />
     <None Remove="ASSETS\FONTS\PermanentMarker-Regular.ttf" />
@@ -35,9 +41,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ASSETS\circle-radiation-solid 1.ico" />
     <Content Include="ASSETS\FONTS\PermanentMarker-Regular.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <PackageReference Include="System.Drawing.Common" Version="8.0.4" />
     <Resource Include="ASSETS\BACKGROUND.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -93,6 +104,21 @@
     <Resource Include="ASSETS\Header\START_BTN_HOVER.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>
