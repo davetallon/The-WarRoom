@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using The_WarRoom.VIEWMODELS;
 
-namespace The_WarRoom.VIEWMODELS
+namespace The_WarRoom.MODELS
 {
-    public class SquareViewModel : ObservableObject
+    public class SquareModel : ObservableObject
     {
         // IS THE SQUARE OCCIPIED? 
         private bool _isOccupied; // field
@@ -23,7 +18,7 @@ namespace The_WarRoom.VIEWMODELS
         {
             get
             {
-                if(string.IsNullOrEmpty(_label))
+                if (string.IsNullOrEmpty(_label))
                 {
                     return "";
                 }

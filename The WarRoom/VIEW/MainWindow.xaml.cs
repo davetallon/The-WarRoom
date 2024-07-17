@@ -5,6 +5,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using The_WarRoom.MODELS;
 using The_WarRoom.VIEW;
 using The_WarRoom.VIEWMODELS;
 
@@ -109,7 +110,7 @@ namespace The_WarRoom
             }
 
             //DISABLE BUTTONS
-            foreach (SquareViewModel square in _viewModel.squareArray)
+            foreach (SquareModel square in _viewModel.squareArray)
             {
                 square.IsOccupied = true;
             }

@@ -1,37 +1,38 @@
 ﻿using System.Windows;
+using The_WarRoom.MODELS;
 
 namespace The_WarRoom.VIEWMODELS
 {
     public class MainViewModel
     {
         //DECLARE SQUARES & NECESSARY VARIABLES
-        public SquareViewModel Sqr0 { get; private set; }
-        public SquareViewModel Sqr1 { get; private set; }
-        public SquareViewModel Sqr2 { get; private set; }
-        public SquareViewModel Sqr3 { get; private set; }
-        public SquareViewModel Sqr4 { get; private set; }
-        public SquareViewModel Sqr5 { get; private set; }
-        public SquareViewModel Sqr6 { get; private set; }
-        public SquareViewModel Sqr7 { get; private set; }
-        public SquareViewModel Sqr8 { get; private set; }
-        public ScorecardViewModel scorecard { get; set; }
-        public SquareViewModel[] squareArray = [];
+        public SquareModel Sqr0 { get; private set; }
+        public SquareModel Sqr1 { get; private set; }
+        public SquareModel Sqr2 { get; private set; }
+        public SquareModel Sqr3 { get; private set; }
+        public SquareModel Sqr4 { get; private set; }
+        public SquareModel Sqr5 { get; private set; }
+        public SquareModel Sqr6 { get; private set; }
+        public SquareModel Sqr7 { get; private set; }
+        public SquareModel Sqr8 { get; private set; }
+        public ScorecardModel scorecard { get; set; }
+        public SquareModel[] squareArray = [];
         private bool isXMove = true;
         public bool isDraw = false;
 
         public MainViewModel()
         {
-            Sqr0 = new SquareViewModel();
-            Sqr1 = new SquareViewModel();
-            Sqr2 = new SquareViewModel();
-            Sqr3 = new SquareViewModel();
-            Sqr4 = new SquareViewModel();
-            Sqr5 = new SquareViewModel();
-            Sqr6 = new SquareViewModel();
-            Sqr7 = new SquareViewModel();
-            Sqr8 = new SquareViewModel();
+            Sqr0 = new SquareModel();
+            Sqr1 = new SquareModel();
+            Sqr2 = new SquareModel();
+            Sqr3 = new SquareModel();
+            Sqr4 = new SquareModel();
+            Sqr5 = new SquareModel();
+            Sqr6 = new SquareModel();
+            Sqr7 = new SquareModel();
+            Sqr8 = new SquareModel();
             squareArray = [Sqr0, Sqr1, Sqr2, Sqr3, Sqr4, Sqr5, Sqr6, Sqr7, Sqr8];
-            scorecard = new ScorecardViewModel();
+            scorecard = new ScorecardModel();
         }
 
 
@@ -69,7 +70,7 @@ namespace The_WarRoom.VIEWMODELS
             } 
         }
 
-        private void AssignValue(SquareViewModel activeSquare, RoutedEventArgs e)
+        private void AssignValue(SquareModel activeSquare, RoutedEventArgs e)
         {
             if(!activeSquare.IsOccupied)
             {
@@ -82,7 +83,7 @@ namespace The_WarRoom.VIEWMODELS
         public void ResetGame()
         {
             //RESET BUTTONS
-            foreach (SquareViewModel square in squareArray)
+            foreach (SquareModel square in squareArray)
             {
                 square.Label = "";
                 square.IsOccupied = false;
@@ -229,7 +230,7 @@ namespace The_WarRoom.VIEWMODELS
             }
         }
 
-        private void DisplayWinningLine(SquareViewModel One, SquareViewModel Two, SquareViewModel Three)
+        private void DisplayWinningLine(SquareModel One, SquareModel Two, SquareModel Three)
         {
             One.FontColour = "Red";
             Two.FontColour = "Red";

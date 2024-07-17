@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using The_WarRoom.VIEWMODELS;
 
-namespace The_WarRoom.VIEWMODELS
+namespace The_WarRoom.MODELS
 {
-    public class ScorecardViewModel : ObservableObject
+    public class ScorecardModel : ObservableObject
     {
         private int _xPoints;
         public int xPoints
         {
             get
             {
-                if(_xPoints == 0)
+                if (_xPoints == 0)
                 {
                     return 0;
                 }
