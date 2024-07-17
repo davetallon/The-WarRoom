@@ -3,6 +3,8 @@
 ## Description
 The WarRoom is a WPF application written in C# & XAML utilizing a MVVM architecture which enables the end-user to play a game of Tic-Tac-Toe. It features a uniquely designed user interface which directly references 'Dr. Strangelove' (1964) by Stanley Kubrick.
 
+![WarRoomGIF](https://github.com/user-attachments/assets/7c67a63d-8e32-46ac-bb3c-7530df43da70)
+
 ## Features
 - Unique Tic-Tac-Toe experience.
 - Visual animations for end-user interactions and other game mechanics.
@@ -12,11 +14,11 @@ The WarRoom is a WPF application written in C# & XAML utilizing a MVVM architect
 
 ## Technologies Used
 - C#: The primary programming language used for the application logic.
-- WPF (Windows Presentation Foundation): The framework used for building the user interface.
 - MVVM (Model-View-ViewModel) Pattern: The architectural pattern used to separate the concerns of the application.
+- WPF (Windows Presentation Foundation): The framework used for building the user interface.
 
 ## Getting Started
-To run the application locally, follow these steps:
+To run the application locally, simply INSTALL using THE WAR ROOM.exe within the /INSTALLERS folder or follow these steps:
 
 1. Clone the repository: `git clone https://github.com/your-username/The-WarRoom.git`
 2. Open the solution file `The WarRoom.sln` in Visual Studio.
